@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerkanKirkan_180201008_FinalProjectTask2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="5"
+            Padding="10,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Library Application"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="Welcome dear user!"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

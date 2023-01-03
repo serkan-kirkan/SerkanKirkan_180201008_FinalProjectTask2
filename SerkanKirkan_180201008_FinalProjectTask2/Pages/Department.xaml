@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerkanKirkan_180201008_FinalProjectTask2.Department">
+    <StackLayout  Orientation="Vertical">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+            <Label Text="Department Name"/>
+            <Entry x:Name="department_name" WidthRequest="200"/>
+        </StackLayout>
+
+
+        <Button x:Name="add" Text="Add" Clicked="add_Clicked"  WidthRequest="250"/>
+        <Button x:Name="show" Text="Show" Clicked="show_Clicked"  WidthRequest="250"/>
+
+        <ScrollView>
+            <ListView x:Name="Department_list_view" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Department_ID}"/>
+                                <Label Text="{Binding Department_Name}"/>
+                                <Button Text="Delete" BindingContext="{Binding Department_ID}" Clicked="delete_Clicked" WidthRequest="250"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+
+    </StackLayout>
+</ContentPage>

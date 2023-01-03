@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SerkanKirkan_180201008_FinalProjectTask2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SerkanKirkan_180201008_FinalProjectTask2"
+    Shell.FlyoutBehavior="Disabled">
+    
+    
+
+    <TabBar>
+        <Tab Title="Homepage" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="Mainpage"/>
+        </Tab>
+
+        <Tab Title="Book Details" Icon="book.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Book}" Route="Book"/>
+        </Tab>
+
+        <Tab Title="Book Category" Icon="category.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Category}" Route="Category"/>
+        </Tab>
+
+        <Tab Title="Student" Icon="student.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Student}" Route="Student"/>
+        </Tab>
+
+        <Tab Title="Department" Icon="department.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Department}" Route="Department"/>
+        </Tab>
+
+        <Tab Title="Enrollment" Icon="enroll.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Enrollment}" Route="Enrollment"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

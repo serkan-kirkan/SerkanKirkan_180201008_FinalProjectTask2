@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerkanKirkan_180201008_FinalProjectTask2.Book">
+    <StackLayout  Orientation="Vertical">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+            <Label Text="Book Name"/>
+            <Entry x:Name="book_name" WidthRequest="200"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Book Author"/>
+            <Entry x:Name="book_author" WidthRequest="200"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Book Category"/>
+            <Picker Title="cates" WidthRequest="200"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Book Page"/>
+            <Entry x:Name="book_page" WidthRequest="200"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Published Date"/>
+            <DatePicker WidthRequest="200"/>
+        </StackLayout>
+        
+        <Button x:Name="add_book" Text="Add" Clicked="add_book_Clicked"  WidthRequest="250"/>
+        <Button x:Name="show_book" Text="Show" Clicked="show_book_Clicked"  WidthRequest="250"/>
+
+        <ScrollView>
+            <ListView x:Name="Book_list_view" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Book_ID}"/>
+                                <Label Text="{Binding Book_Name}"/>
+                                <Label Text="{Binding Book_Author}"/>
+                                <Label Text="{Binding Book_Page}"/>
+                                <Button x:Name="book_delete" Text="Delete" BindingContext="{Binding Book_ID}" Clicked="book_delete_Clicked"  WidthRequest="250"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        
+        
+    </StackLayout>
+</ContentPage>
